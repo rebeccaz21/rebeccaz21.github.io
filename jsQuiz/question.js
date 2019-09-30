@@ -5,13 +5,11 @@ class Question {
     this.answer = answer;
 	
 	}
-}
 
-var questions = [
-	new Question("Hyper Text Markup Language Stand For?", ["JavaScript", "XHTML","CSS", "HTML"], "HTML"),
-	new Question("Which language is used for styling web pages?", ["HTML", "JQuery", "CSS", "XML"], "CSS"),
-	new Question("What has not been covered in PUI lab?", ["HTML", "CSS","Javascript", "Java"], "Java"),
-];
+	isCorrectAnswer(choice){
+   		return this.answer === choice;
+    }
+}
 
 class Quiz {
 
@@ -27,10 +25,6 @@ class Quiz {
 		return this.questions[this.questionIndex];
 	
 	}
-
-	isCorrectAnswer(choice){
-   		return this.answer === choice;
-    }
 
     guess(answer) {
     	if(this.getQuestion().isCorrectAnswer(answer)) {
@@ -75,13 +69,20 @@ function populate() {
 	}
 };
 
-
 function showScores() {
 	var gameOverHTML = "<h1>Result</h1>";
 	gameOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
 	var element = document.getElementById("quiz");
 	element.innerHTML = gameOverHTML;
 };
+
+
+
+var questions = [
+	new Question("Hyper Text Markup Language Stand For?", ["JavaScript", "XHTML","CSS", "HTML"], "HTML"),
+	new Question("Which language is used for styling web pages?", ["HTML", "JQuery", "CSS", "XML"], "CSS"),
+	new Question("What has not been covered in PUI lab?", ["HTML", "CSS","Javascript", "Java"], "Java"),
+];
 
 var quiz = new Quiz(questions);
 populate();
