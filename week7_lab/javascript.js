@@ -19,7 +19,7 @@ function lemur(name,age) {
 	this.image = "lemur.png"
 }
 
-var animal = [ new lemur(), new elephant(), new panda()];
+var animals = [ new lemur(), new elephant(), new panda()];
 var names = new Array("larry", "sally","po");
 
 function generateRandomIndex(maxIndex) {
@@ -40,7 +40,7 @@ function generateRandomAge() {
 
 function generateRandomAnimal() {
 	var randomIdx = Math.floor(Math.random() * 3)
-	var anim = animal[randomIdx];
+	var anim = animals[randomIdx];
 
 	if (anim instanceof panda) {
 		return new panda(generateRandomName(),generateRandomAge());
@@ -55,3 +55,9 @@ function generateRandomAnimal() {
 	}
 
 }
+
+$(document).ready(function() {
+	  var animal = generateRandomAnimal();
+	  $("#animal-properties").text(animal.name + "  " + animal.age + "years old");
+  	  $("#animal-img").attr("src", animal.image);
+});
