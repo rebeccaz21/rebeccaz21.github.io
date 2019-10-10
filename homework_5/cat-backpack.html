@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <script src="java.js" type="text/javascript"></script>
     <!-- javascript -->
     <!-- <script src="main.js" type="text/javascript"></script> -->
 </head>
@@ -44,7 +45,7 @@
     </div>
 
     <div id = "product">
-        <img class = "backpack" src="cat-backpack.png" alt = "cat backpack"/>
+        <img id = "product-image" class = "backpack" src="catbackpack1.png" alt = "cat backpack"/>
 
         <div id = "information">
             <h3> Cat Backpack </h3>
@@ -53,29 +54,29 @@
 
             <div id = "size">
                 <h4> Size </h4>
-                <input type="checkbox" name="tiny"> tiny
-                <input type="checkbox" name="small"> small
-                <input type="checkbox" name="medium"> medium
-                <input type="checkbox" name="large"> large
+                <input type="checkbox" id = "5" name="tiny" onclick = "sizeOnly('5')"> tiny
+                <input type="checkbox" id = "6" name="small" onclick = "sizeOnly('6')"> small
+                <input type="checkbox" id = "7" name="medium" onclick = "sizeOnly('7')"> medium
+                <input type="checkbox" id = "8" name="large" onclick = "sizeOnly('8')"> large
             </div>
 
             <div id = "color">
                 <h4> Color </h4>
 
                 <div class = "strawberry">
-                    <input type="checkbox"> strawberry
+                    <input type="checkbox" id = "1" onclick = "changePhoto('1','catbackpack3.png')"> strawberry
                 </div>
 
                 <div class = "crazyberry">
-                    <input type="checkbox"> crazyberry
+                    <input type="checkbox" id = "2" onclick = "changePhoto('2','catbackpack2.png')" > crazyberry
                 </div>
 
                 <div class = "fireorange">
-                    <input type="checkbox"> fire orange
+                    <input type="checkbox" id = "3" onclick = "changePhoto('3','catbackpack4.png')" > fire orange
                 </div>
 
                 <div class = "blackberry">
-                    <input type="checkbox"> blackberry
+                    <input type="checkbox" id = "4" onclick = "changePhoto('4','catbackpack1.png')" > blackberry
                 </div>
 
             </div>
