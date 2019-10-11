@@ -46,9 +46,15 @@ function sizeOnly(checkbox_id) {
 		}
 
 };
-	/*
 
-	if (document.getElementById(checkbox_id).checked) {
-		document.getElementById('product-image').src=file;
-		console.log("hello");
+function addToPack() {
+	console.log("hello");
+	/* check which size and color are selected in helper functions
+	use those to get the right photo s*/
+};
+	/*
+	all items need to be in classes so we can display them the same way in the grid
+	we need to have something display when there is no items in the cart
+	we need ot keep track of a variable for how many items in the cart and objects
+	object for item = photo, name, size, color, quantity
 	} */

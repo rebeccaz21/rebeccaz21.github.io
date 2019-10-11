@@ -539,3 +539,72 @@ h3 a {
 	margin: 0 auto;
 	width: 90%;
 }
+
+#Your-Pack {
+	padding-left: 50px;
+	padding-top: 20px;
+}
+
+#item-list {
+
+	display:grid;
+	grid-template-columns: 100px 150px 400px 200px; 
+	grid-template-rows: 500px;
+	grid-gap: 100px;
+	margin: 0 auto;
+    justify-content: left;
+    width: 95%;
+
+}
+
+img#item-1 {
+	display: block;
+	padding-left: 30px;
+	height: 125px;
+	width: 125px;
+
+}
+
+.item-details h4 {
+	line-height: 10%;
+	padding-top: 10px;
+	text-decoration: underline;
+	text-decoration-color: #BDCADB;
+}
+
+.item-details h5 {
+	line-height: 10%;
+}
+
+#remove {
+	font-family: Futura;
+	text-decoration: italic;
+	font-size: 10px;
+	color: red;
+}
+
+#check-out {
+	background: #DDE9F9;
+	font-family: "Futura", sans-serif;
+	box-shadow: 0 0 4px 4px rgba(203,203,203,0.50);
+  	border: none;
+  	color: black;
+  	padding: 10px 50px 10px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+}
+
+#summary h5 {
+	line-height: 10%;
+}
+
+#summary h4 {
+	line-height: 100%;
+}
+
+#summary h3 {
+	line-height: 100%;
+}
+
