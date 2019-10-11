@@ -47,6 +47,18 @@ function sizeOnly(checkbox_id) {
 
 };
 
+
+var clicks = 0;
+function onClick() {
+	clicks += 1;                    
+	document.getElementById("clicks").innerHTML = clicks;
+};
+
+function onClick2() {
+	clicks -= 1;                    
+	document.getElementById("clicks").innerHTML = clicks;
+};
+
 function addToPack() {
 	console.log("hello");
 	/* check which size and color are selected in helper functions
