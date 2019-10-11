@@ -17,6 +17,14 @@
 	document.getElementById('id').checked = true;
 }; */
 
+function prod(name, size, color, image, num) {
+	this.name = name;
+	this.size = size;
+	this.color = color;
+	this.image = "panda.png";
+	this.num = num
+}
+
 function changePhoto(checkbox_id,file) {
 	for (var i = 1; i <= 4; i++) 
 	
@@ -48,7 +56,7 @@ function sizeOnly(checkbox_id) {
 };
 
 
-var clicks = 0;
+var clicks = 1;
 function onClick() {
 	clicks += 1;                    
 	document.getElementById("clicks").innerHTML = clicks;
@@ -61,8 +69,8 @@ function onClick2() {
 
 function addToPack() {
 	console.log("hello");
-	/* check which size and color are selected in helper functions
-	use those to get the right photo s*/
+	/* check which size and color, image are selected in helper functions
+	use those to make a new object and add it to the list of pack*/
 };
 	/*
 	all items need to be in classes so we can display them the same way in the grid

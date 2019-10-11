@@ -55,28 +55,14 @@
 
         <!-- Quantity -->
         <div class = "quantity">
-            <script type="text/javascript">
-            var clicks = 0;
-            function onClick() {
-                clicks += 1;                    
-                document.getElementById("clicks").innerHTML = clicks;
-            };
-
-            function onClick2() {
-                clicks -= 1;                    
-                document.getElementById("clicks").innerHTML = clicks;
-            };
-
-            </script>
-
-            <p>Quantity: <a id="clicks">0</a></p>
+            <p>Quantity: <a id="clicks">1</a></p>
             <button type="button" onClick="onClick()">+</button>
             <button type="button" onClick="onClick2()">-</button>
         </div>
 
         <div id = "summary">
             <h3> Summary </h3>
-            <h4> 1 item </h4>
+            <h4> 1 Item </h4>
             <h5> Subtotal: </h5>
             <h5> Tax: </h5>
             <h5> Shipping: </h5>
@@ -86,7 +72,7 @@
 
     </div>
 
-
+    <footer> made by beccy zheng </footer>
 </body>
 
 </html>
