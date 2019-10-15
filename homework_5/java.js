@@ -59,19 +59,21 @@ function onClick2() {
 	document.getElementById("clicks").innerHTML = clicks;
 };
 
-function prod(name, size, color, image, num) {
-	this.name = name;
+function prod(size, color, image, num) {
+	this.name = "cat backpack";
 	this.size = size;
 	this.color = color;
 	this.image = image;
 	this.num = num;
+	this.price= 44.95;
 }
 
 var pack = 0;
 
 function addToPack() {
-	pack += 1;
-	console.log(pack);
+
+	pack = parseInt(localStorage.getItem("packNum")) + 1;
+	localStorage.setItem("packNum",pack);
 	
 	var L = document.getElementById("addTo");
 	L.textContent = "pack ("+pack+")";
@@ -79,7 +81,61 @@ function addToPack() {
 
 	console.log(L.textContent);
 
-	return pack;
+	/* check the size */
+
+	for (var i = 10; i <= 16; i+=2) 
+	
+	{ 
+		/* the size is checked*/
+		var ind = parseInt(i / 2);
+		if (document.getElementById(ind).checked) {
+			var s = document.getElementById(i).innerText;
+		} 
+	}
+
+	/* check the color */
+
+	for (var j = 100; j <= 400; j+= 100) {
+		var inde = parseInt(j/100);
+		if (document.getElementById(inde).checked) {
+			var c = document.getElementById(j).innerText;
+			console.log(document.getElementById(j).innerText);
+		}
+
+	}
+
+	/*  get the correct image */
+	var im; 
+
+	if (c == " strawberry") {
+		im = "catbackpack3.png";
+	}
+
+	else if (c == " crazyberry") {
+		im = "catbackpack2.png";
+	}
+
+	else if (c == " fire orange") {
+		im = "catbackpack4.png"; 
+	}
+
+	else if (c == " blackberry") {
+		im = "catbackpack1.png";
+	}
+
+	console.log(s);
+	console.log(c);
+	console.log(im);
+
+	var catbp = new prod(s,c,im,1);
+	var n = localStorage.getItem("packNum");
+
+	localStorage.setItem(n,JSON.stringify(catbp));
+
+	console.log(localStorage.getItem(n));
+
+
+	return;
 
 	/* check which size and color, image are selected in helper functions
 	use those to make a new object and add it to the list of pack, add it to local storage to view it in shopping cart page*/
@@ -97,7 +153,17 @@ function addToPack() {
 
 function onLoad() {
 
-	console.log("hi");
+	var x = localStorage.getItem("packNum");
+	var max = parseInt(x)+1;
+	console.log(max);
+	var Y = document.getElementsByClassName("updatePack")[0];		
+	console.log(Y);
+	Y.innerHTML = "pack ("+x+")"; 
+
+	for (k = 1; k < max; k++) {
+		var hehe = localStorage.getItem(k);
+		console.log(hehe);
+	}
 
 }
 
