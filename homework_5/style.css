@@ -557,7 +557,7 @@ h3 a {
 
 }
 
-img#item-1 {
+img.item-1 {
 	display: block;
 	padding-left: 30px;
 	height: 125px;

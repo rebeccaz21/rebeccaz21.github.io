@@ -136,19 +136,17 @@ function addToPack() {
 
 
 	return;
-
-	/* check which size and color, image are selected in helper functions
-	use those to make a new object and add it to the list of pack, add it to local storage to view it in shopping cart page*/
 };
 	/*
-	all items need to be in classes so we can display them the same way in the grid
-	we need to have something display when there is no items in the cart
-	we need ot keep track of a variable for how many items in the cart and objects
-	object for item = photo, name, size, color, quantity
-	} 
+	use local storage to create a list of objects
+	everytime we create an object, append it to the local storage
 
-	use localStorage to store and remove as well 
-	how can we format how the cart looks?
+	when we want to create the html for the pack page, loop through the list and generate the html as strings: 
+	"<div class = sdfjisoj"+catbackpack2.png+"</div>" etc. like that and use "\n" 
+	then use innerHTML to change the innerHTMl within the div (so have one div id = ... for all of the items)
+	create a variable outside of the function loop that will hold allll of the strings that we have
+	then at the end, document.getId( id name for products) then write to innerHTML = the string for everything
+	that we have just created
 	*/
 
 function onLoad() {
