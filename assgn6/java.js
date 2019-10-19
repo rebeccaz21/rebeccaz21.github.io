@@ -216,6 +216,20 @@ function onLoad2() {
 	console.log(newStr);
 	document.getElementById("pack-products").innerHTML = newStr;
 
+
+	/* calculate the new totals + numbers */
+
+	var subtotal = Number(44.95 * curr.length).toFixed(2);
+	var total = Number(subtotal+3).toFixed(2);
+
+	var newSum = "<h3> Summary </h3> <h4>"+ curr.length+" Items </h4> <h5> Subtotal: " + subtotal+ "</h5>";
+	newSum = newSum + "<h5> Tax: $3.00 </h5> <h5> Shipping: Free</h5> <h4> Total: "+ total+"</h4>";
+	newSum = newSum + "<button id = 'check-out'> Checkout </button> <button id = 'c' onClick = 'clearE()'> clear everything </button>";
+
+	document.getElementById("summary").innerHTML = newSum;
+
+
+
 };
 
 function onLoad() {
