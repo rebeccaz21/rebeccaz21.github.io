@@ -69,10 +69,11 @@ function prod(size, color, image, num) {
 }
 
 var pack = 0;
+localStorage.setItem("lstOfProd", JSON.stringify(new Array ()));
 
 function addToPack() {
 
-	pack = parseInt(localStorage.getItem("packNum")) + 1;
+	pack = JSON.parse((localStorage.getItem("packNum"))) + 1;
 	localStorage.setItem("packNum",pack);
 	
 	var L = document.getElementById("addTo");
@@ -131,6 +132,13 @@ function addToPack() {
 	var n = localStorage.getItem("packNum");
 
 	localStorage.setItem(n,JSON.stringify(catbp));
+
+	
+	var currList = JSON.parse(localStorage.getItem("lstOfProd"));
+	var test = currList.push(catbp); 
+	localStorage.setItem("lstOfProd",JSON.stringify(currList));
+
+	console.log(JSON.parse(localStorage.getItem("lstOfProd")));
 
 	console.log(localStorage.getItem(n));
 

@@ -548,8 +548,19 @@ h3 a {
 #item-list {
 
 	display:grid;
-	grid-template-columns: 100px 150px 400px 200px; 
-	grid-template-rows: 500px;
+	grid-template-columns: 650px 200px; 
+	grid-template-rows: 1000px;
+	grid-gap: 100px;
+	margin: 0 auto;
+    justify-content: left;
+    width: 95%;
+
+}
+
+#pack-products {
+	display: grid;
+	grid-template-columns: 100px 150px 400px; 
+	grid-template-rows: 300px;
 	grid-gap: 100px;
 	margin: 0 auto;
     justify-content: left;

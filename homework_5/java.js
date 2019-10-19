@@ -135,10 +135,10 @@ function addToPack() {
 
 	
 	var currList = JSON.parse(localStorage.getItem("lstOfProd"));
-	currList.appendChild(catbp);
+	var test = currList.push(catbp); 
 	localStorage.setItem("lstOfProd",JSON.stringify(currList));
 
-	console.log(localStorage.getItem("lstOfProd"));
+	console.log(JSON.parse(localStorage.getItem("lstOfProd")));
 
 	console.log(localStorage.getItem(n));
 
