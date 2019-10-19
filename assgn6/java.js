@@ -69,18 +69,15 @@ function prod(size, color, image, num) {
 }
 
 var pack = 0;
-localStorage.setItem("lstOfProd", JSON.stringify(new Array ()));
+var new_ar = new Array();
 
 function addToPack() {
 
 	pack = JSON.parse((localStorage.getItem("packNum"))) + 1;
 	localStorage.setItem("packNum",pack);
-	
-	var L = document.getElementById("addTo");
-	L.textContent = "pack ("+pack+")";
 
-
-	console.log(L.textContent);
+	new_ar = JSON.parse(localStorage.getItem("lstOfProd"));
+	localStorage.setItem("lstOfProd", JSON.stringify(new_ar));
 
 	/* check the size */
 
@@ -138,9 +135,14 @@ function addToPack() {
 	var test = currList.push(catbp); 
 	localStorage.setItem("lstOfProd",JSON.stringify(currList));
 
+	var L = document.getElementById("addTo");
+	L.textContent = "pack ("+new_ar.length+")";
+
 	console.log(JSON.parse(localStorage.getItem("lstOfProd")));
+	console.log("finished");
 
 	console.log(localStorage.getItem(n));
+	window.location.reload()
 
 
 	return;
@@ -157,19 +159,88 @@ function addToPack() {
 	that we have just created
 	*/
 
-function onLoad() {
+
+function clearE() {
+	
+	var x = localStorage.getItem("packNum");
+	var y = localStorage.getItem("lstOfProd");
+
+	localStorage.setItem("packNum",JSON.stringify(0));
+	localStorage.setItem("lstOfProd",JSON.stringify(new Array()));
+	console.log("cleared");
+	window.location.reload()
+	return;
+}
+
+function onLoad2() {
 
 	var x = localStorage.getItem("packNum");
 	var max = parseInt(x)+1;
 	console.log(max);
+
+	var curr = JSON.parse(localStorage.getItem("lstOfProd"));
+
+
 	var Y = document.getElementsByClassName("updatePack")[0];		
 	console.log(Y);
-	Y.innerHTML = "pack ("+x+")"; 
+	var corr_num = parseInt(x)+1;
+	Y.innerHTML = "pack ("+curr.length+")"; 
 
 	for (k = 1; k < max; k++) {
 		var hehe = localStorage.getItem(k);
 		console.log(hehe);
 	}
 
-}
+	var newStr = "";
+	localStorage.setItem("lstOfProd",JSON.stringify(curr));
+	console.log(curr);
+
+	for (i = 0; i < curr.length; i++) {
+
+		if (curr == []) {
+			newStr = "No products!";
+		}
+
+		else {
+
+			var item = curr[i];
+
+			newStr = newStr+"<img id = 'item-1' class = 'in-cart' src="+item.image+" alt = 'cat backpack' /> ";
+			newStr = newStr+"<div class = 'item-details'> <h4> Cat Backpack </h4 <h5>"+item.size+"/"+item.color+"</h5> <p id = 'remove'> remove </p> </div>";
+			newStr = newStr+"<div class = 'quantity'> <p> Quantity: <a id = 'clicks'>1</a></p> <button type='button' onClick='onClick()'>+</button> ";
+			newStr = newStr+"<button type='button' onClick='onClick2()'>-</button> </div>"
+
+		}
+	}
+
+	console.log(newStr);
+	document.getElementById("pack-products").innerHTML = newStr;
+
+};
+
+function onLoad() {
+
+	var x = localStorage.getItem("packNum");
+	var max = parseInt(x)+1;
+	console.log(max);
+
+	var curr = JSON.parse(localStorage.getItem("lstOfProd"));
+
+
+	var Y = document.getElementsByClassName("updatePack")[0];		
+	console.log(Y);
+	var corr_num = parseInt(x)+1;
+	Y.innerHTML = "pack ("+curr.length+")"; 
+
+
+	for (k = 1; k < max; k++) {
+		var hehe = localStorage.getItem(k);
+		console.log(hehe);
+	}
+
+	localStorage.setItem("lstOfProd",JSON.stringify(curr));
+	console.log(curr);
+
+};
+
 
