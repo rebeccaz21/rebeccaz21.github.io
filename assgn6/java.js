@@ -85,19 +85,19 @@ function addToPack() {
 	var im; 
 
 	if (c == " strawberry") {
-		im = "catbackpack3.png";
+		im = "Assets/catbackpack3.png";
 	}
 
 	else if (c == " crazyberry") {
-		im = "catbackpack2.png";
+		im = "Assets/catbackpack2.png";
 	}
 
 	else if (c == " fire orange") {
-		im = "catbackpack4.png"; 
+		im = "Assets/catbackpack4.png"; 
 	}
 
 	else if (c == " blackberry") {
-		im = "catbackpack1.png";
+		im = "Assets/catbackpack1.png";
 	}
 
 	console.log(s);
