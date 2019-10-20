@@ -552,7 +552,7 @@ h3 a {
 #item-list {
 
 	display:grid;
-	grid-template-columns: 650px 200px; 
+	grid-template-columns: 750px 200px; 
 	grid-gap: 100px;
 	margin: 0 auto;
     justify-content: left;
@@ -562,7 +562,7 @@ h3 a {
 
 #pack-products {
 	display: grid;
-	grid-template-columns: 100px 150px 400px; 
+	grid-template-columns: 100px 150px 100px 100px; 
 	grid-gap: 100px;
 	margin: 0 auto;
     justify-content: left;
