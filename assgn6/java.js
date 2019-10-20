@@ -1,22 +1,3 @@
-
-/* document.addEventListener("DOMContentLoaded", function() {
-	for (var i = 1; i <= 4; i++) 
-	{
-		document.getElementById('i').checked = false;
-	}
-
-});
-
- function selectOnlyThis(id) {
-	for (var i = 1; i <= 4; i++) 
-	{
-		if (document.getElementById('i').checked) {
-			document.getElementById('i').checked = false;
-		}
-	}
-	document.getElementById('id').checked = true;
-}; */
-
 function changePhoto(checkbox_id,file) {
 	for (var i = 1; i <= 4; i++) 
 	
@@ -73,8 +54,6 @@ var new_ar = new Array();
 
 function addToPack() {
 
-	pack = JSON.parse((localStorage.getItem("packNum"))) + 1;
-	localStorage.setItem("packNum",pack);
 
 	new_ar = JSON.parse(localStorage.getItem("lstOfProd"));
 	localStorage.setItem("lstOfProd", JSON.stringify(new_ar));
@@ -126,9 +105,6 @@ function addToPack() {
 	console.log(im);
 
 	var catbp = new prod(s,c,im,1);
-	var n = localStorage.getItem("packNum");
-
-	localStorage.setItem(n,JSON.stringify(catbp));
 
 	
 	var currList = JSON.parse(localStorage.getItem("lstOfProd"));
@@ -140,8 +116,6 @@ function addToPack() {
 
 	console.log(JSON.parse(localStorage.getItem("lstOfProd")));
 	console.log("finished");
-
-	console.log(localStorage.getItem(n));
 	window.location.reload()
 
 
@@ -162,10 +136,9 @@ function addToPack() {
 
 function clearE() {
 	
-	var x = localStorage.getItem("packNum");
 	var y = localStorage.getItem("lstOfProd");
 
-	localStorage.setItem("packNum",JSON.stringify(0));
+	
 	localStorage.setItem("lstOfProd",JSON.stringify(new Array()));
 	console.log("cleared");
 	window.location.reload()
@@ -174,22 +147,13 @@ function clearE() {
 
 function onLoad2() {
 
-	var x = localStorage.getItem("packNum");
-	var max = parseInt(x)+1;
-	console.log(max);
-
 	var curr = JSON.parse(localStorage.getItem("lstOfProd"));
 
 
 	var Y = document.getElementsByClassName("updatePack")[0];		
 	console.log(Y);
-	var corr_num = parseInt(x)+1;
 	Y.innerHTML = "pack ("+curr.length+")"; 
 
-	for (k = 1; k < max; k++) {
-		var hehe = localStorage.getItem(k);
-		console.log(hehe);
-	}
 
 	var newStr = "";
 	localStorage.setItem("lstOfProd",JSON.stringify(curr));
@@ -220,10 +184,11 @@ function onLoad2() {
 	/* calculate the new totals + numbers */
 
 	var subtotal = Number(44.95 * curr.length).toFixed(2);
-	var total = Number(subtotal+3).toFixed(2);
+	var tax = Number(.07* subtotal).toFixed(2);
+	var total = Number( Number(tax)+Number(subtotal)).toFixed(2);
 
-	var newSum = "<h3> Summary </h3> <h4>"+ curr.length+" Items </h4> <h5> Subtotal: " + subtotal+ "</h5>";
-	newSum = newSum + "<h5> Tax: $3.00 </h5> <h5> Shipping: Free</h5> <h4> Total: "+ total+"</h4>";
+	var newSum = "<h3> Summary </h3> <h4>"+ curr.length+" Items </h4> <h5> Subtotal: $" + subtotal+ "</h5>";
+	newSum = newSum + "<h5> Tax: $" +tax+ "</h5> <h5> Shipping: Free</h5> <h4> Total: $"+ total+"</h4>";
 	newSum = newSum + "<button id = 'check-out'> Checkout </button> <button id = 'c' onClick = 'clearE()'> clear everything </button>";
 
 	document.getElementById("summary").innerHTML = newSum;
@@ -234,23 +199,12 @@ function onLoad2() {
 
 function onLoad() {
 
-	var x = localStorage.getItem("packNum");
-	var max = parseInt(x)+1;
-	console.log(max);
-
 	var curr = JSON.parse(localStorage.getItem("lstOfProd"));
 
 
 	var Y = document.getElementsByClassName("updatePack")[0];		
 	console.log(Y);
-	var corr_num = parseInt(x)+1;
 	Y.innerHTML = "pack ("+curr.length+")"; 
-
-
-	for (k = 1; k < max; k++) {
-		var hehe = localStorage.getItem(k);
-		console.log(hehe);
-	}
 
 	localStorage.setItem("lstOfProd",JSON.stringify(curr));
 	console.log(curr);
