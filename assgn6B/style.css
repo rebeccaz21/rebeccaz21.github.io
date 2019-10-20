@@ -589,11 +589,12 @@ img#item-1 {
 	line-height: 10%;
 }
 
-#remove {
+.remove {
 	font-family: Futura;
 	text-decoration: italic;
 	font-size: 10px;
 	color: red;
+	border: none;
 }
 
 #check-out {
