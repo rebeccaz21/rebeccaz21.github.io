@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Muddy Paws Adventure Gear</title>
+    <!-- styles -->
+    <!-- fonts --> 
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <script src="java.js" type="text/javascript"></script>
+    <!-- javascript -->
+    <!-- <script src="main.js" type="text/javascript"></script> -->
+</head>
+
+<body onload = "onLoad()">
+       <div id = "banner">
+
+        <h1> <img class = "paws1" src="Assets/cat-footprint.png" alt = "paws"/> muddy paws adventure gear <img class = "paws2" src="Assets/cat-footprint.png" alt = "paws" /> </h1>
+            <!-- navigation bar for each page -->
+            <div class="nav">
+
+                <div class="search">
+                    <img class = "search-image" src="Assets/search.png" alt = "magnifying glass"/> <a href="#">search</a>
+                </div>
+
+                <div>
+                    <a href="index.html">home</a>  
+                    <a href="shop.html">shop</a>            
+                    <a href="#">our story</a>
+                    <a href="contact.html">contact</a>
+                </div>
+                
+                <div class="pack">
+                    <img class = "pack-image" src="Assets/backpack.png" alt = "backpack" /> <a href="cart.html" id = "addTo" class = "updatePack">pack</a>
+                </div>
+
+            </div>
+    </div>
+
+
+    <div id = "back">
+        <h3> <a href="shop.html"> Back To Shopping</a> </h3>
+    </div>
+
+    <div id = "product">
+        <img id = "product-image" class = "backpack" src="Assets/catbackpack1.png" alt = "cat backpack"/>
+
+        <div id = "information">
+            <h3> Cat Backpack </h3>
+            <h4> $44.95 </h4>
+            <p> The purr-fect backpack for an adventurous and prepared cat. Made out of the most durable materials that won’t wear out and will always be in style. </p>
+
+            <div id = "size">
+                <h4> Size </h4>
+                <label id = "10"> <input type="checkbox" id = "5" name="tiny" onclick = "sizeOnly('5')"> tiny </label>
+                <label id = "12"> <input type="checkbox" id = "6" name="small" onclick = "sizeOnly('6')"> small </label>
+                <label id = "14"> <input type="checkbox" id = "7" name="medium" onclick = "sizeOnly('7')"> medium </label>
+                <label id = "16"> <input type="checkbox" id = "8" name="large" onclick = "sizeOnly('8')"> large </label>
+            </div>
+
+            <div id = "color">
+                <h4> Color </h4>
+
+                <div class = "strawberry">
+                    <label id = "100"> <input type="checkbox" id = "1" onclick = "changePhoto('1','Assets/catbackpack3.png')"> strawberry </label>
+                </div> 
+
+                <div class = "crazyberry">
+                    <label id = "200"> <input type="checkbox" id = "2" onclick = "changePhoto('2','Assets/catbackpack2.png')" > crazyberry </label>
+                </div>
+
+                <div class = "fireorange">
+                    <label id = "300"> <input type="checkbox" id = "3" onclick = "changePhoto('3','Assets/catbackpack4.png')" > fire orange </label>
+                </div>
+
+                <div class = "blackberry">
+                    <label id = "400"> <input type="checkbox" id = "4" onclick = "changePhoto('4','Assets/catbackpack1.png')" > blackberry </label>
+                </div>
+
+            </div>
+
+            <div id = "add">
+                <button id = "add-button" onclick = "addToPack()"> Add to Pack </button>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div id = "reviews">
+        <h2> Reviews </h2>
+
+        <div id = "name">
+            <h4> Betsy Ross - September 9, 2019  <img class = "paws3" src="Assets/cat-footprint.png" alt = "paws"/> <img class = "paws3" src="Assets/cat-footprint.png" alt = "paws"/> <img class = "paws3" src="Assets/cat-footprint.png" alt = "paws"/> <img class = "paws3" src="Assets/cat-footprint.png" alt = "paws"/> <img class = "paws3" src="Assets/cat-footprint.png" alt = "paws"/></h4>
+            <p> I love this backpack, and so does furry feline! It’s perfect for camping, hiking, basically anything outdoors-related. I will definitely be purchasing another one for my other cats! Would recommend to anyone. Also, loving the colors! I’m a happy customer. </p>
+        </div>
+    </div>
+
+    <footer> made by beccy zheng </footer>
+
+</body>
+
+</html>
