@@ -56,7 +56,7 @@ function addToPack() {
 
 
 	new_ar = JSON.parse(localStorage.getItem("lstOfProd"));
-	localStorage.setItem("lstOfProd", JSON.stringify(new_ar));
+	localStorage.setItem("lstOfProd", JSON.stringify(new_ar))
 
 	/* check the size */
 
