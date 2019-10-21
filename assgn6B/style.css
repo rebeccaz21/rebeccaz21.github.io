@@ -562,12 +562,21 @@ h3 a {
 
 #pack-products {
 	display: grid;
-	grid-template-columns: 100px 150px 100px 100px; 
+	grid-template-columns: 750px; 
 	grid-gap: 100px;
 	margin: 0 auto;
     justify-content: left;
     width: 95%;
 
+}
+
+.specific-prod {
+	display: grid;
+	grid-template-columns: 100px 150px 100px 100px; 
+	grid-gap: 100px;
+	margin: 0 auto;
+    justify-content: left;
+    width: 95%;
 }
 
 img#item-1 {

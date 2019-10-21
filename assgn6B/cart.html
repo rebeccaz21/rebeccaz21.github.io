@@ -47,12 +47,15 @@
     <div id = "item-list">
 
         <div id = "pack-products">
+
+            <!-- create new div class for each item and have pack-products be one long grid and have inner div class be grid so we can get .parentNode.removeChild -->
+            <div class = "specific-prod">    
                 <img id= "item-1" class = "in-cart" src="" alt = ""/>
 
                 <div class = "item-details">
                     <h4> </h4>
                     <h5>    </h5>
-                    <button class = "remove" onclick = "removeItem()"> </button>
+                    <button class = "remove" onclick = "removeItem(this)"> </button>
                 </div>
 
                 <!-- Quantity -->
@@ -65,6 +68,7 @@
                 <div class = "prod-price">
                     <p> </p>
                 </div>
+            </div>
         </div>
 
         <div id = "summary">

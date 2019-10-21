@@ -145,6 +145,37 @@ function clearE() {
 	return;
 }
 
+function rnd() {
+	return Math.floor(Math.random() * 100);
+}
+
+function removeItem(elem) {
+
+	console.log("removing");
+
+	var lst = JSON.parse(localStorage.getItem("lstOfProd"));
+	var index = parseInt(elem.getAttribute("id"));
+	lst.splice(index,1);
+
+	localStorage.setItem("lstOfProd",JSON.stringify(lst));
+
+	/* loop through list and how can we check
+
+	perhaps assign each button with the index so that 
+	we can retrieve the index and get the cart from local storage and splice it
+	then when we load again, it will reupdate the the i for each item 
+
+	*/
+
+	elem.parentNode.parentNode.remove();
+
+
+
+	/* we need to remove the object from the list and update pack*/
+	window.location.reload();
+	return;
+}
+
 function onLoad2() {
 
 	var curr = JSON.parse(localStorage.getItem("lstOfProd"));
@@ -169,11 +200,13 @@ function onLoad2() {
 
 			var item = curr[i];
 
-			newStr = newStr+ "<img id = 'item-1' class = 'in-cart' src="+item.image+" alt = 'cat backpack' /> ";
-			newStr = newStr+"<div class = 'item-details'> <h4> Cat Backpack </h4 <h5>"+item.size+"/"+item.color+"</h5> <button class = 'remove' onclick = 'removeItem()'> remove </button> </div>";
+			/* perhaps have div class for each item and this will be a grid and css will change grid for that one */
+
+			newStr = newStr+ "<div class = 'specific-prod'> <img id = 'item-1' class = 'in-cart' src="+item.image+" alt = 'cat backpack' /> ";
+			newStr = newStr+"<div class = 'item-details'> <h4> Cat Backpack </h4 <h5>"+item.size+"/"+item.color+"</h5> <button class = 'remove' id = "+ i +" onclick = 'removeItem(this)'> remove </button> </div>";
 			newStr = newStr+"<div class = 'quantity'> <p> Quantity: <a id = 'clicks'>" + item.num+"</a></p> <button type='button' onClick='onClick()'>+</button> ";
 			newStr = newStr+"<button type='button' onClick='onClick2()'>-</button> </div>"; 
-			newStr = newStr + "<div class = 'prod-price'> <p> $"+item.price+" </p> </div>";
+			newStr = newStr + "<div class = 'prod-price'> <p> $"+item.price+" </p> </div> </div>";
 
 		}
 	}
@@ -212,11 +245,5 @@ function onLoad() {
 
 };
 
-function removeItem() {
-	console.log("removing");
-
-	/* we need to remove the object from the list and also remove it visually from the page */
-	return;
-}
 
 
