@@ -204,8 +204,6 @@ function onLoad2() {
 
 			newStr = newStr+ "<div class = 'specific-prod'> <img id = 'item-1' class = 'in-cart' src="+item.image+" alt = 'cat backpack' /> ";
 			newStr = newStr+"<div class = 'item-details'> <h4> Cat Backpack </h4 <h5>"+item.size+"/"+item.color+"</h5> <button class = 'remove' id = "+ i +" onclick = 'removeItem(this)'> remove </button> </div>";
-			newStr = newStr+"<div class = 'quantity'> <p> Quantity: <a id = 'clicks'>" + item.num+"</a></p> <button type='button' onClick='onClick()'>+</button> ";
-			newStr = newStr+"<button type='button' onClick='onClick2()'>-</button> </div>"; 
 			newStr = newStr + "<div class = 'prod-price'> <p> $"+item.price+" </p> </div> </div>";
 
 		}
