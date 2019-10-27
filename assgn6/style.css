@@ -552,7 +552,7 @@ h3 a {
 #item-list {
 
 	display:grid;
-	grid-template-columns: 750px 200px; 
+	grid-template-columns: 650px 200px; 
 	grid-gap: 100px;
 	margin: 0 auto;
     justify-content: left;
@@ -562,12 +562,21 @@ h3 a {
 
 #pack-products {
 	display: grid;
-	grid-template-columns: 100px 150px 100px 100px;
+	grid-template-columns: 650px; 
 	grid-gap: 100px;
 	margin: 0 auto;
     justify-content: left;
     width: 95%;
 
+}
+
+.specific-prod {
+	display: grid;
+	grid-template-columns: 100px 150px  100px; 
+	grid-gap: 100px;
+	margin: 0 auto;
+    justify-content: left;
+    width: 95%;
 }
 
 img#item-1 {
@@ -589,11 +598,12 @@ img#item-1 {
 	line-height: 10%;
 }
 
-#remove {
+.remove {
 	font-family: Futura;
 	text-decoration: italic;
 	font-size: 10px;
 	color: red;
+	border: none;
 }
 
 #check-out {
@@ -629,6 +639,8 @@ footer {
 
 	background: #f7f8ff;
 	font-family: "Futura", sans-serif;
+
+	/* box-shadow: 0 0 4px 4px rgba(203,203,203,0.50); */
   	border: none;
   	color: black;
   	padding: 10px 50px 10px;

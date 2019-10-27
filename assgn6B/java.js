@@ -145,10 +145,6 @@ function clearE() {
 	return;
 }
 
-function rnd() {
-	return Math.floor(Math.random() * 100);
-}
-
 function removeItem(elem) {
 
 	console.log("removing");

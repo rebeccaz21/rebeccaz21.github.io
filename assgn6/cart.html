@@ -48,34 +48,36 @@
 
         <div id = "pack-products">
 
-            <img id= "item-1" class = "in-cart" src="" alt = ""/>
+            <!-- create new div class for each item and have pack-products be one long grid and have inner div class be grid so we can get .parentNode.removeChild -->
+            <div class = "specific-prod">    
+                <img id= "item-1" class = "in-cart" src="" alt = ""/>
 
-            <div class = "item-details">
-                <h4> </h4>
-                <h5> </h5>
-                <p id = "remove"> </p>
-            </div>
+                <div class = "item-details">
+                    <h4> </h4>
+                    <h5>    </h5>
+                    <button class = "remove" onclick = "removeItem(this)"> </button>
+                </div>
 
-            <!-- Quantity -->
-            <div class = "quantity">
-                <p></p>
-                <button type="button" onClick="onClick()"></button>
-                <button type="button" onClick="onClick2()"></button>
-            </div>
+                <!-- Quantity -->
+                <!-- <div class = "quantity">
+                    <p></p>
+                    <button type="button" onClick="onClick()"></button>
+                    <button type="button" onClick="onClick2()"></button>
+                </div> -->
 
-            <div class = "prod-price">
-                <p> </p>
+                <div class = "prod-price">
+                    <p> </p>
+                </div>
             </div>
-            
         </div>
 
         <div id = "summary">
-            <h3> Summary </h3>
-            <h4> 1 Item </h4>
-            <h5> Subtotal: </h5>
-            <h5> Tax: $3.00</h5>
-            <h5> Shipping: Free</h5>
-            <h4> Total: $44.95</h4>
+            <h3>  </h3>
+            <h4> </h4>
+            <h5>  </h5>
+            <h5> </h5>
+            <h5> </h5>
+            <h4> </h4>
             <button id = "check-out"> Checkout </button>
             <button id = "c" onClick = "clearE()"> clear everything </button>
         </div>
