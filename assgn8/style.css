@@ -44,6 +44,20 @@ p {
 
 }
 
+.hoverEgg {
+  height: 75%;
+  opacity: 1;
+
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+.hoverEgg:hover {
+  opacity: .5 !important;
+}
+
+
 #eggceptional {
   padding-top: 0px;
 }
@@ -84,6 +98,7 @@ p {
   color: #7870FF !important;
   font-weight: 600;
   background-color: #FFF5D5 !important;
+  opacity: 1;
 }
 
 #scrollHere {
@@ -134,7 +149,7 @@ h5 {
   color: #7870FF !important;
 }
 
-#what-eggs {
+.what-eggs {
   font-weight: 700;
   color: #7870FF !important;
   margin: 0px;

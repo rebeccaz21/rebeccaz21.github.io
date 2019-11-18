@@ -11,6 +11,7 @@
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<link href="style.css" rel="stylesheet">
 	<link rel="stylesheet" href="animations.css">
+	<script src="java.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -61,17 +62,17 @@
 			<h5> How much time do you have? </h5>
 
 			<div class="input-group mb-3">
-  				<input type="text" class="form-control" placeholder="Enter time in minutes" aria-label="Enter time in minutes" aria-describedby="basic-addon2">
+  				<input type="text" id = "myText" class="form-control" placeholder="Enter time in minutes" aria-label="Enter time in minutes" aria-describedby="basic-addon2">
 
   				<div class="input-group-append" id = "time-but">
     				<span id = "min" class="input-group-text">Minutes</span>
-    				<button id = "sub" class="btn btn-outline-secondary" type="button">Submit</button>
+    				<button id = "sub" class="btn btn-outline-secondary" type="button" onclick = "calculateEggs()">Submit</button>
  				</div>
 
 			</div>
 
-			<h5 id = "make"> You can make: </h5>
-			<h6 id = "what-eggs"> Scrambled Eggs </h6>
+			<div id = "calculate"> 
+			</div>
 
 		</div>
 
@@ -84,12 +85,13 @@
 <div class = "container-fluid padding" id = "puns"> 
 	<div class = "text-center">
 		<h1 id = "Random" > Random Egg Pun Generator </h1>
-		<button id = "rand-pun" class = "bt btn-outline-secondary" type = "button">
+		<button id = "rand-pun" class = "bt btn-outline-secondary" type = "button" onclick = "newPun()">
 			Generate Random Egg Pun.
 		</button>
 
+		<div id = "pun">
+		</div>
 
-		<h3> You are scrambled. </h3>
 	</div>
 </div>
 
