@@ -1,13 +1,173 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
+@import url('https://fonts.googleapis.com/css?family=Public+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+html { scroll-behavior: smooth; }
 
 
 
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  background-color: #FFF5D5 !important;
+  color: #CE6236 !important;
+}
 
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #CE6236 !important;
+}
 
+#big-egg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+#two-eggs {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+#boiled-egg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.egg {
+  height: 75%;
+
+}
+
+#eggceptional {
+  padding-top: 0px;
+}
+
+#click-on-egg {
+  color: #7870FF !important;
+}
+
+.nav-link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #CE6236 !important ;
+}
+
+.bg-color {
+  background-color: #FFD961 !important;
+}
+
+.jumbotron {
+  background-color: #FFEBA9 !important;
+}
+
+#chev {
+  align-content: center !important;
+  margin: 0 auto !important;
+  padding-top: 30px;
+
+}
+
+#chev-color {
+  background-color: #FFEBA9 !important;
+
+}
+
+#reveal {
+  font-family: "Montserrat",sans-serif;
+  width: 50%;
+  color: #7870FF !important;
+  font-weight: 600;
+  background-color: #FFF5D5 !important;
+}
+
+#scrollHere {
+  padding-top: 50px;
+  align-content: center !important;
+  margin: 0 auto !important;
+}
+
+#puns {
+  padding-top: 50px;
+}
+
+#about {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: #7870FF !important;
+}
+
+#descript {
+  color: #7870FF !important;
+}
+
+h6 {
+  width: 50% !important;
+  margin: 0 auto;
+  padding-bottom: 20px;
+
+}
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+#bt {
+  padding-top: 20px;
+}
+
+#more {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: #7870FF !important;
+}
+h5 {
+  font-size: 15px !important;
+  padding-bottom: 10px;
+  color: #7870FF !important;
+}
+
+#what-eggs {
+  font-weight: 700;
+  color: #7870FF !important;
+  margin: 0px;
+}
+
+.input-group {
+  padding-top:20px;
+}
+
+#min {
+  color: white !important;
+  background: #7870FF !important;
+}
+
+#make {
+  padding-top: 30px;
+
+}
+
+#Random {
+  padding-bottom: 30px;
+}
+
+#rand-pun {
+  margin-bottom: 30px;
+  border-color: white;
+  border-radius: 5px;
+}
+
+#rand-pun:hover {
+  color: white;
+  background-color:#E79472 !important;
+}
 
 
 /*---Media Queries --*/
@@ -63,9 +223,6 @@ figure {
 [class*="col-"] {
     padding: 1rem;
 }
-
-
-
 
 
 /*

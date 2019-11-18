@@ -3,53 +3,138 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Complete Bootstrap 4 Website Layout</title>
+	<title>Eggspert</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" href="animations.css">
+	<script src="java.js" type="text/javascript"></script>
 </head>
 <body>
 
 <!-- Navigation -->
+<nav class = "navbar navbar-expand-md navbar-light bg-color sticky-top">
+	<div class = "container-fluid">
+		<a class = "navbar-brand slideDown" href = "index.html"> <img src = "img/logo.png"> </a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+
+		<div class = "collapse navbar-collapse" id = "navbarSupportedContent">
+			<ul class = "navbar-nav ml-auto">
+				<li class = "nav-itme">
+					<a class="nav-link active slideDown" href = "index.html"> Home </a>
+			</ul>
+
+			<ul class = "navbar-nav ml-auto">
+				<li class = "nav-itme">
+					<a class="nav-link slideDown" href = "more.html"> More </a>
+			</ul>
+
+			<ul class = "navbar-nav ml-auto">
+				<li class = "nav-itme">
+					<a class="nav-link slideDown" href = "about.html"> About </a>
+			</ul>
+
+		</div>
+	</div>
+
+</nav>
+
+<!--- Beginning Section -->
+ 
+<div class = "container-fluid">
+	<div class = "row jumbotron">
+		<div class = "col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+			<p class="lead slideLeft"> welcome. </p>
+			<p class = "slideLeft"> This site is for those who love, or are even remotely interested in the different ways to make eggs (there are a lot!). Eggs can be both the simplest and most complex part of your meal. Scroll to learn more.</p>
+			<p class = "slideLeft"> Scroll to learn more. </p>
+		</div>
+
+		<div class = "col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" >
+			<img class = "img-fluid bigEntrance" id = "big-egg" src = "img/big-egg.png">
+		</div>
+
+		<div class = "row slideDown" id = "scrollHere">
+			<button type="button" id = "chev-color" class="btn btn-default btn-sm col-12" onclick = "onLinkClick()">
+          		<i class="fa fa-chevron-down" aria-hidden="true"></i>
+    		</button>
+		</div>
+
+	</div>
 
 
-<!--- Image Slider -->
+</div>
+
+<div class = "container-fluid padding">
+	<div class = "row welcome text-center">
+		<div class = "col-12">
+			<img class = "img-fluid" id = "eggceptional" src = "img/eggceptional.png">
+		</div>
+
+		<hr>
+
+		<div class = "col-12">
+			<p id = "click-on-egg"> Click on each egg to see what can be made!</p>
+		</div>
+
+	</div>
 
 
-<!--- Jumbotron -->
+</div>
 
 
-<!--- Welcome Section -->
+
+<!--- Egg Section -->
+
+<div class = "container-fluid padding">
+	<div class= "row text-center">
+
+		<div class = "col-sm-6 col-md-3 pulse">
+			<img id = "0" class = "egg" src = "img/egg.png">
+		</div>
+
+		<div class = "col-sm-6 col-md-3 pulse">
+			<img id = "1" class = "egg" src = "img/egg.png">
+		</div>
+
+		<div class = "col-sm-6 col-md-3 pulse">
+			<img id = "2" class = "egg" src = "img/egg.png">
+		</div>
+
+		<div class = "col-sm-6 col-md-3 pulse">
+			<img id = "3" class = "egg" src = "img/egg.png">
+		</div>
+
+		<div class = "col-sm-6 col-md-3 pulse">
+			<img id = "4" class = "egg" src = "img/egg.png">
+		</div>
+
+		<div class = "col-sm-6 col-md-3 pulse">
+			<img id = "5" class = "egg" src = "img/egg.png">
+		</div>
+
+		<div class = "col-sm-6 col-md-3 pulse">
+			<img id = "6" class = "egg" src = "img/egg.png">
+		</div>
+
+		<div class = "col-sm-6 col-md-3 pulse">
+			<img id = "7"class = "egg" src = "img/egg.png">
+		</div>
+
+	</div>
+
+	<div class = "row" id = "bt"> 
+		<button type="button" id = "reveal" class="btn btn-default btn-sm col-5 mx-auto">
+			reveal all.
+		</button>
+	</div>
 
 
-<!--- Three Column Section -->
-
-
-<!--- Two Column Section -->
-
-
-<!--- Fixed background -->
-
-
-<!--- Emoji Section -->
-
-  
-<!--- Meet the team -->
-
-
-<!--- Cards -->
-
-
-<!--- Two Column Section -->
-
-
-<!--- Connect -->
-
-
-<!--- Footer -->
+</div>
 
 
 
@@ -67,23 +152,6 @@
 
 
 
-
-
-
-
- <!--- Check out w3newbie Templates & Courses! -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
- <div style="float:left; max-width: 48%; margin: .5rem; padding: 0; border: .5rem solid #666;">
- 	<a href="https://w3newbie.com/templates/" target="_blank" style="z-index: 100; cursor: pointer!important;"><img src="https://www.w3newbie.com/wp-content/uploads/w3newbie-templates-zip.png" style="max-width: 100%; min-width: 100%;"></a>
-</div>
- <div style="float:left; max-width: 48%; margin: .5rem; padding: 0; border: .5rem solid #666;">
- 	<a href="https://w3newbie.com/courses/" target="_blank" style="z-index: 100; cursor: pointer!important;"><img src="https://www.w3newbie.com/wp-content/uploads/w3newbie-courses-zip.png" style="max-width: 100%; min-width: 100%;"></a>
-</div>
-<br style="clear: both;">
-<div style="max-width: 52%; margin: 2rem auto; padding: 0; border: .5rem solid #666;">
- 	<a href="https://w3newbie.com/hosting/" target="_blank" style="z-index: 100; cursor: pointer!important;"><img src="https://www.w3newbie.com/wp-content/uploads/web-hosting-zip.jpg" style="max-width: 100%; min-width: 100%;"></a>
-</div>
- <!--- Check out w3newbie Templates & Courses! -->
 
 
 

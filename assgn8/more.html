@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eggspert</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" href="animations.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class = "navbar navbar-expand-md navbar-light bg-color sticky-top">
+	<div class = "container-fluid">
+		<a class = "navbar-brand slideDown" href = "index.html"> <img src = "img/logo.png"> </a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+
+		<div class = "collapse navbar-collapse" id = "navbarSupportedContent">
+			<ul class = "navbar-nav ml-auto">
+				<li class = "nav-itme">
+					<a class="nav-link active slideDown" href = "index.html"> Home </a>
+			</ul>
+
+			<ul class = "navbar-nav ml-auto">
+				<li class = "nav-itme">
+					<a class="nav-link slideDown" href = "more.html"> More </a>
+			</ul>
+
+			<ul class = "navbar-nav ml-auto">
+				<li class = "nav-itme">
+					<a class="nav-link slideDown" href = "about.html"> About </a>
+			</ul>
+
+		</div>
+	</div>
+
+</nav>
+
+<div class = "container-fluid padding" id = "more"> 
+	<h1> More </h1>
+</div>
+
+<!--- Time Calculator -->
+
+<div class = "container-fluid padding">
+	<div class = "row jumbotron">
+		<div class = "col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-5">
+			<img class = "img-fluid floating" id = "boiled-egg" src = "img/boiled-egg.png">
+		</div>
+
+		<div class = "col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-7">
+			
+			<h5> Don't know what type of egg to make?</h5>
+			<h5> How much time do you have? </h5>
+
+			<div class="input-group mb-3">
+  				<input type="text" class="form-control" placeholder="Enter time in minutes" aria-label="Enter time in minutes" aria-describedby="basic-addon2">
+
+  				<div class="input-group-append" id = "time-but">
+    				<span id = "min" class="input-group-text">Minutes</span>
+    				<button id = "sub" class="btn btn-outline-secondary" type="button">Submit</button>
+ 				</div>
+
+			</div>
+
+			<h5 id = "make"> You can make: </h5>
+			<h6 id = "what-eggs"> Scrambled Eggs </h6>
+
+		</div>
+
+	</div>
+</div>
+
+
+<!--- Egg Puns -->
+
+<div class = "container-fluid padding" id = "puns"> 
+	<div class = "text-center">
+		<h1 id = "Random" > Random Egg Pun Generator </h1>
+		<button id = "rand-pun" class = "bt btn-outline-secondary" type = "button">
+			Generate Random Egg Pun.
+		</button>
+
+
+		<h3> You are scrambled. </h3>
+	</div>
+</div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
