@@ -18,11 +18,12 @@
 <!-- Navigation -->
 <nav class = "navbar navbar-expand-md navbar-light bg-color sticky-top">
 	<div class = "container-fluid">
+		<!-- Responsive Navigation -->
 		<a class = "navbar-brand slideDown" href = "index.html"> <img src = "img/logo.png"> </a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
   		</button>
-
+  		<!-- Navigation for Home, More, and About -->
 		<div class = "collapse navbar-collapse" id = "navbarSupportedContent">
 			<ul class = "navbar-nav ml-auto">
 				<li class = "nav-itme">
@@ -49,15 +50,18 @@
 <div class = "container-fluid">
 	<div class = "row jumbotron">
 		<div class = "col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+			<!-- Welcome Message -->
 			<p class="lead"> welcome. </p>
 			<p> This site is for those who love, or are even remotely interested in the different ways to make eggs (there are a lot!). Eggs can be both the simplest and most complex part of your meal.</p>
 			<p> Scroll to learn more. </p>
 		</div>
 
+		<!-- Big Egg Image -->
 		<div class = "col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" >
 			<img class = "img-fluid bigEntrance" id = "big-egg" src = "img/big-egg.png">
 		</div>
 
+		<!-- Chevron for smooth transition -->
 		<div class = "row slideDown" id = "scrollHere">
 			<button type="button" id = "chev-color" class="btn btn-default btn-sm col-12" onclick = "onLinkClick()">
           		<i class="fa fa-chevron-down" aria-hidden="true"></i>
@@ -69,6 +73,7 @@
 
 </div>
 
+<!-- Interactive Egg Header -->
 <div class = "container-fluid padding">
 	<div class = "row welcome text-center">
 		<div class = "col-12">
@@ -88,10 +93,13 @@
 
 
 
-<!--- Egg Section -->
+<!--- Interactive Egg Section -->
 
 <div class = "container-fluid padding">
 	<div class= "row text-center">
+
+		<!--- Show 8 different pulsing eggs. Each is unique and has a unique id 
+			  When clicked, egg transitions and animates into a way to cook eggs. -->
 
 		<div class = "col-sm-6 col-md-3 pulse">
 			<img id = "0" class = "egg" src = "img/egg.png" onclick= "changeEgg('0')">
@@ -127,6 +135,7 @@
 
 	</div>
 
+	<!--- Allow users to reveal everything to get more information at once. -->
 	<div class = "row" id = "bt"> 
 		<button type="button" id = "reveal" class="btn btn-default btn-sm col-5 mx-auto" onclick = "revealAll()">
 			reveal all.

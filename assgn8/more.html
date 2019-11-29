@@ -44,11 +44,13 @@
 
 </nav>
 
+<!--- Header -->
+
 <div class = "container-fluid padding" id = "more"> 
 	<h1> More </h1>
 </div>
 
-<!--- Time Calculator -->
+<!--- Egg Time Calculator -->
 
 <div class = "container-fluid padding">
 	<div class = "row jumbotron">
@@ -61,6 +63,11 @@
 			<h5> Don't know what type of egg to make?</h5>
 			<h5> How much time do you have? </h5>
 
+			<!--- This is where the warning will show up if a non-integer is placed in the form -->
+			<div id = "warn" class= "alert alert-danger"> 
+			</div>
+
+			<!--- Form input includes label for "minutes" and option to submit -->
 			<div class="input-group mb-3">
   				<input type="text" id = "myText" class="form-control" placeholder="Enter time in minutes" aria-label="Enter time in minutes" aria-describedby="basic-addon2">
 
@@ -71,6 +78,8 @@
 
 			</div>
 
+			<!--- This section will fill with all of the eggs that can be made.
+				  Users can click on each to be taken to a recipe page. -->
 			<div id = "calculate"> 
 			</div>
 
@@ -85,14 +94,39 @@
 <div class = "container-fluid padding" id = "puns"> 
 	<div class = "text-center">
 		<h1 id = "Random" > Random Egg Pun Generator </h1>
+		<!--- Button to generate random egg pun. -->
 		<button id = "rand-pun" class = "bt btn-outline-secondary" type = "button" onclick = "newPun()">
 			Generate Random Egg Pun.
 		</button>
 
+		<!--- This will fill with the pun. -->
 		<div id = "pun">
 		</div>
 
 	</div>
+</div>
+
+<!--- Chicken or Egg Section -->
+<div class = "container-fluid padding jumbotron" id = "first">
+	<div class = "text-center">
+		<h2> Which came first - Chicken or Egg? </h2>
+		<h6> Click on each for a fun surprise. </h6>
+	</div>
+
+	<!--- Have two images (egg and chicken) and then allow users to click on each multiple times to change the opacity -->
+	<div class = "row">
+		<!--- Egg -->
+		<div class = "col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 circ-pic" id = "eggie" onclick = "change_o1()">
+			<img class = "img-fluid floating" src = "img/red-egg.png">
+		</div>
+
+		<!--- Chicken -->
+		<div class = "col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 circ-pic" id = "chickie" onclick = "change_o2()">
+			<img class = "img-fluid floating" src = "img/pink-chick.png">
+		</div>
+
+	</div>
+
 </div>
 
 
