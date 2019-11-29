@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+@import url('https://fonts.googleapis.com/css?family=Public+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+html { scroll-behavior: smooth; }
+
+
+/* GENERIC FOR ALL PAGES */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  background-color: #FFF5D5 !important;
+  color: #CE6236 !important;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #CE6236 !important;
+}
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+#bt {
+  padding-top: 20px;
+}
+
+/*--- style for large egg images on each page --*/
+
+#big-egg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#two-eggs {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#boiled-egg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* color of navigation link, background color, and jumbotron background*/
+
+.nav-link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #CE6236 !important ;
+}
+
+.bg-color {
+  background-color: #FFD961 !important;
+}
+
+.jumbotron {
+  background-color: #FFEBA9 !important;
+}
+
+/* HOME PAGE !!! */
+
+/*--- each egg on the "Eggceptional" interactive section on "Home" page --*/
+.egg {
+  height: 75%;
+
+}
+
+/*--- style for after eggs are clicked on --*/
+.hoverEgg {
+  height: 50%;
+  opacity: .5 !important;
+
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+
+  transition: height .25s ease-in-out;
+  -moz-transition: height .25s ease-in-out;
+  -webkit-transition: height .25s ease-in-out;
+}
+
+/*--- animate the eggs --*/
+
+.hoverEgg:hover {
+  opacity: 1 !important;
+  height: 75%;
+}
+
+/*--- information about eggs (time/difficulty) for interactive home page --*/
+.top-layer {
+  padding-top: 20px;
+}
+
+#eggceptional {
+  padding-top: 0px;
+}
+
+#click-on-egg {
+  color: #7870FF !important;
+}
+
+/* style for chevron button and color*/
+#chev {
+  align-content: center !important;
+  margin: 0 auto !important;
+  padding-top: 30px;
+
+}
+
+#chev-color {
+  background-color: #FFEBA9 !important;
+
+}
+
+/* style for where the chevron button should scroll to*/
+#scrollHere {
+  padding-top: 50px;
+  align-content: center !important;
+  margin: 0 auto !important;
+  transition-delay: 2s !important;
+}
+
+/* style for reveal all button*/
+#reveal {
+  font-family: "Montserrat",sans-serif;
+  width: 50%;
+  color: #7870FF !important;
+  font-weight: 600;
+  background-color: #FFF5D5 !important;
+  opacity: 1;
+}
+
+/* MORE PAGE !!! */
+
+
+#more {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: #7870FF !important;
+}
+
+/* Style for h5 which shows up on first section of More page */
+h5 {
+  font-size: 15px !important;
+  padding-bottom: 10px;
+  color: #7870FF !important;
+}
+
+/* Style for which kinds of egg the user can make */
+.what-eggs {
+  font-weight: 700;
+  color: #7870FF !important;
+  margin: 0px;
+}
+
+/* styling for warning message */
+#warn {
+  opacity: 0;
+  font-size: 12px !important;
+}
+
+/* spacing for form input and other text */
+.input-group {
+  padding-top:20px;
+}
+
+/* Style for "min" label of input form */
+#min {
+  color: white !important;
+  background: #7870FF !important;
+}
+
+sub:hover {
+  color: white !important;
+}
+
+/* style for eggs the user can make and the links */
+a {
+  color: #564FCD;
+}
+
+a:hover {
+  color: #D8490C;
+}
+
+#make {
+  padding-top: 30px;
+
+}
+
+/* Style for Random Pun Generator */
+#Random {
+  padding-bottom: 30px;
+}
+
+/* Style for the random pun button and hover*/
+#rand-pun {
+  margin-bottom: 30px;
+  border-color: white;
+  border-radius: 5px;
+}
+
+#rand-pun:hover {
+  color: white;
+  background-color:#E79472 !important;
+}
+
+/* style for puns */
+#puns {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* style for circular images for "Egg or Chicken" section */
+.circ-pic {
+  padding: 50px 100px 100px 100px !important;
+  content: center;
+}
+
+/* chick image opacity starts at .1*/
+#chickie {
+  opacity: .1;
+}
+
+/* egg image opacity starts at .1 */
+#eggie {
+  opacity: .1;
+}
+
+/* .smol {
+  font-size: 12px !important;
+  font-weight: 800;
+} */
+
+/* ABOUT PAGE !!! */
+
+/* style for about page */
+#about {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: #7870FF !important;
+}
+
+/* description color for "About" page */
+#descript {
+  color: #7870FF !important;
+}
+
+/* style for h6 which shows up on "About" page */
+h6 {
+  width: 50% !important;
+  margin: 0 auto;
+  padding-bottom: 20px;
+
+}
+
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+  }
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 576px) {
+  
+}
+
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  background-image: url('img/mac.png');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+
+
+
+
+
+
+
