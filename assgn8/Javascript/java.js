@@ -18,7 +18,7 @@ function changeEgg(id) {
 
 	//change the image to be a unique way to cook an egg
 	// also get the difficulty and time from the 2-d array "ease"
-	var inner = "<img id = '"+id+"' class = 'hoverEgg' src = 'img/"+ id+".png'>";
+	var inner = "<img id = '"+id+"' class = 'hoverEgg' src = 'Assets/"+ id+".png'>";
 	var difficulty = ease[id][0];
 	var time = ease[id][1];
 
@@ -38,7 +38,7 @@ function revealAll() {
 	//change the innerHTMl to display all the information
 	for (i=0; i<=7; i++) {
 		document.getElementById(i).parentElement.className = "col-sm-6 col-md-3 fadeIn";
-		var inner = "<img id = '"+i+"' class = 'hoverEgg' src = 'img/"+ i+".png'>";
+		var inner = "<img id = '"+i+"' class = 'hoverEgg' src = 'Assets/"+ i+".png'>";
 		var difficulty = ease[i][0];
 		var time = ease[i][1];
 		inner = inner + "<div class = 'top-layer'> <div class = 'tex'> <h6 class = 'smol'> Difficulty: "+difficulty+"</h6>";
