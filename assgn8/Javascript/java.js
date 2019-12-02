@@ -144,7 +144,7 @@ function calculateEggs() {
 				["Hard-Boiled","https://www.deliciousmeetshealthy.com/how-to-make-perfect-hard-boiled-eggs/"]
 				["Omelet","https://www.foodnetwork.com/recipes/alton-brown/omelet-recipe-1914282"]
 
-			];	
+			];
 		}
 
 		// if user has over 15 minutes, they can make all of the egg options
@@ -170,7 +170,7 @@ function calculateEggs() {
 
 		// look through the length of the list, get the type of egg and the link to recipe
 		// update the innerHTML
-		for (i = 0; i < z.length ; i++) {
+		for (i = 0; i < z.length - 1 ; i++) {
 			console.log(z[i]);
 			var firstList = z[i]
 			var nextEgg = firstList[0];
